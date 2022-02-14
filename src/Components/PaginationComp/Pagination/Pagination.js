@@ -5,7 +5,7 @@ import {useSearchParams} from 'react-router-dom';
 const Pagination = ({total_pages}) => {
     const [searchParams] = useSearchParams();
     return (
-        <div className={'paginationBtns'}>
+        <div >
             <PaginationButton to={`?page=${+searchParams.get('page') - 1}`}
                               disabled={searchParams.get('page') <= 1}>prev</PaginationButton>
             <PaginationButton to={`?page=${+searchParams.get('page') + 1}`}
